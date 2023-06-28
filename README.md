@@ -16,7 +16,7 @@ docker run --name js-web-runner -p 3010:3000 -d --restart always mereith/js-web-
 
 打开 http://<ip>:3010/ 即可访问。
 
-### Verce 部署
+### Vercel 部署
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/mereithhh/js-web-runner)
 
 ### 现有问题
