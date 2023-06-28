@@ -1,5 +1,7 @@
 # js-web-runner
-js 代码在线执行器
+js 代码在线执行器，在线执行 js 代码，支持 nodejs api。
+
+在线地址（部署到 Verce 上可能比较慢）：[http://js-web-runner.mereith.com/](http://js-web-runner.mereith.com/)
 
 ![截图](img/js-web-runner.png)
 
@@ -16,3 +18,6 @@ docker run --name js-web-runner -p 3010:3000 -d --restart always mereith/js-web-
 
 ### Verce 部署
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/mereithhh/js-web-runner)
+
+### 现有问题
+- [ ] 编辑器加载很慢
