@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { spawn } from "node:child_process"
 import fs from "node:fs"
+import { Base64 } from "js-base64";
 
 const jsonSuccess = (obj: any) => NextResponse.json({
   data: obj,
@@ -19,7 +20,7 @@ export async function POST(request: Request) {
     if (!code) {
       return jsonError(new Error("code 不能为空"));
     }
-    const decodeCode = Buffer.from(code, "base64").toString("utf-8");
+    const decodeCode = Base64.decode(code)
     const codeResult: RunCodeResult = (await runCodeWithChildProcess(decodeCode, timeout)) as any as RunCodeResult;
     return jsonSuccess(codeResult)
   } catch (err) {

@@ -1,5 +1,7 @@
+import { Base64 } from "js-base64";
+
 export const postRunCode = (code: string) => {
-  const base64Code = btoa(code);
+  const base64Code = Base64.encode(code);
   return fetch("/api/run", {
     method: "POST",
     body: JSON.stringify({ code: base64Code }),
